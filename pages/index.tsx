@@ -1,12 +1,19 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
+import Link from "next/link";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
+function HomePage(): JSX.Element {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}">
-      Hello Next World!
+    <div>
+      <h1>Home Page</h1>
+      <ul>
+        <li>
+          <Link href="/portfolio">Portfolio</Link>
+        </li>
+        <li>
+          <Link href="/clients">Clients</Link>
+        </li>
+      </ul>
     </div>
   );
 }
+
+export default HomePage;
